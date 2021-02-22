@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Log">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="379dp"
+        android:layout_height="222dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="322dp"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:text="Czy na pewno chcesz się wylogować?"
+        android:textAlignment="center"
+        android:textColor="#070707"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="242dp" />
+
+    <Button
+        android:id="@+id/btAdd"
+        android:layout_width="138dp"
+        android:layout_height="72dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="253dp"
+        android:layout_marginBottom="339dp"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:text="TAK"
+        android:textAlignment="center"
+        android:textColor="#0F0F0F"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/bn"
+        android:layout_width="138dp"
+        android:layout_height="72dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="42dp"
+        android:layout_marginBottom="335dp"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:text="NIE"
+        android:textAlignment="center"
+        android:textColor="#070707"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+</RelativeLayout>

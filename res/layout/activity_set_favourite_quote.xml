@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SetFavouriteQuote"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/favouriteQuote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:textColor="#000000"
+        android:layout_marginTop="230dp"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/setFavourite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:text="ZMIEŃ SWÓJ ULUBIONY CYTAT"
+        android:textSize="24sp" />
+
+</LinearLayout>

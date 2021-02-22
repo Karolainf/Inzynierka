@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B9A175"
+    tools:context=".Menu">
+
+    <Button
+        android:id="@+id/ranking"
+        android:layout_width="204dp"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginEnd="205dp"
+        android:layout_marginRight="204dp"
+        android:background="@drawable/ranking_button"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:text="Ranking"
+        android:textAlignment="center"
+        android:textColor="#0E0E0E"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/profil"
+        android:layout_width="204dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-3dp"
+        android:layout_marginEnd="-3dp"
+        android:layout_marginRight="-3dp"
+        android:background="@drawable/account_button"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:text="Profil"
+        android:textAlignment="center"
+        android:textColor="#0E0E0E"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/cytat"
+        android:layout_width="204dp"
+        android:layout_height="200dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-8dp"
+        android:layout_marginRight="-8dp"
+        android:layout_marginBottom="221dp"
+        android:background="@drawable/quotes_button"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:text="Cytaty"
+        android:textAlignment="center"
+        android:textColor="#050505"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/myQuotes"
+        android:layout_width="204dp"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginRight="201dp"
+        android:layout_marginBottom="221dp"
+        android:background="@drawable/my_quotes_button"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:text="MOJE CYTATY"
+        android:textAlignment="center"
+        android:textColor="#050505"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/znajomi"
+        android:layout_width="204dp"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginRight="204dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/friends_button"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:text="Znajomi"
+        android:textAlignment="center"
+        android:textColor="#070707"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/wyloguj"
+        android:layout_width="204dp"
+        android:layout_height="200dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-5dp"
+        android:layout_marginRight="-5dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/log_out_button"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:text="WYLOGUJ"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#0A0A0A"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
