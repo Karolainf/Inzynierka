@@ -95,22 +95,14 @@ public class MyProfile extends AppCompatActivity {
         quotesNumber = (TextView) findViewById(R.id.quotesNumber);
 
 
-        //String favourite = String.valueOf(ref.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("ulubionyCytat"));
-        //favouriteQuote.setText(favourite);
 
         if(Profile.getCurrentProfile() != null) {
             profilePictureView.setVisibility(View.VISIBLE);
             textView.setText(Profile.getCurrentProfile().getFirstName());
-            //profilePictureView.setProfileId(Profile.getCurrentProfile().getId());
-            //changePicture.setVisibility(View.VISIBLE);
             profilePictureView.setProfileId(Profile.getCurrentProfile().getId());
-            //String img = Profile.getCurrentProfile().getProfilePictureUri(300, 300).toString();
-            //Picasso.with(MyProfile.this).load(img).into(photoFacebook);
-            //String profileImg = "https://graph.facebook.com/" + Profile.getCurrentProfile().getId() + "/picture?type=large&width=1080";
 
             dataQuotesF = FirebaseDatabase.getInstance().getReference().child("uzytkownicy").child(Profile.getCurrentProfile().getId()).child("dodane");
             dataFavouriteF = FirebaseDatabase.getInstance().getReference().child("uzytkownicy").child(Profile.getCurrentProfile().getId()).child("ulubionyCytat");
-            //dataPhotoF = FirebaseDatabase.getInstance().getReference().child("uzytkownicy").child(Profile.getCurrentProfile().getId()).child("zdjecie");
             dataFriendsF = FirebaseDatabase.getInstance().getReference().child("uzytkownicy").child(Profile.getCurrentProfile().getId()).child("znajomi");
 
 

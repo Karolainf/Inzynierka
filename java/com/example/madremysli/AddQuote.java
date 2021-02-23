@@ -70,7 +70,6 @@ public class AddQuote extends AppCompatActivity {
             id = databaseReference.push().getKey();
 
             quoteKlucz = id;
-            //nie wyswietla się nazwa użytkownika
 
             AddQuoteHelper addQuoteHelper = new AddQuoteHelper(Profile.getCurrentProfile().getId(), quoteName, quoteAuthor, quoteCategory, quoteLike, quoteKlucz);
 
@@ -78,12 +77,9 @@ public class AddQuote extends AppCompatActivity {
 
             //nadpisuje
             reference = ref.child(Profile.getCurrentProfile().getId()).child("dodane");
-            //Map<Object, String> userData = new HashMap<Object, String>();
 
             Map<String, Object> userData = new HashMap<String, Object>();
-            // userData.put(id, "cytat");
             userData.put(id, 1);
-            //   databaseReference =
 
 
             databaseReference.child(id).setValue(addQuoteHelper);

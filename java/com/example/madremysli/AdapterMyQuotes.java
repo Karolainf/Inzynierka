@@ -30,17 +30,9 @@ public class AdapterMyQuotes extends RecyclerView.Adapter<AdapterMyQuotes.MyView
     private OnItemClickListener mListener;
     FirebaseUser firebaseUser;
     DatabaseReference ref, reference;
-    int clicked = 0;
-    int quantity;
-    //private static boolean isAdded = false;
-    //private static boolean isClickedLike = false;
-    //String klucz;
-    MyQuoteStructure myQuoteStructure;
 
     public interface OnItemClickListener {
         void onDeleteClick(int position);
-        void onFirstDelete(int position);
-       // void onFirstClick(int position);
     }
 
 
@@ -69,7 +61,6 @@ public class AdapterMyQuotes extends RecyclerView.Adapter<AdapterMyQuotes.MyView
         holder.tresc.setText(list.get(position).getTresc());
         holder.kategoria.setText(list.get(position).getKategoria());
         holder.polubienie.setText(list.get(position).getPolubienie());
-//        holder.klucz.setText(list.get(position).getKlucz());
 
     }
 
@@ -81,10 +72,7 @@ public class AdapterMyQuotes extends RecyclerView.Adapter<AdapterMyQuotes.MyView
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView autor, tresc, kategoria, polubienie, klucz;
-        ToggleButton edit, delete;
-        // ImageButton like, dislike;
-        // Button button;
+        TextView autor, tresc, kategoria, polubienie;
         ImageView usun;
         public MyViewHolder(@NonNull View itemView, final OnItemClickListener listener) {
             super(itemView);
@@ -94,7 +82,6 @@ public class AdapterMyQuotes extends RecyclerView.Adapter<AdapterMyQuotes.MyView
             polubienie = itemView.findViewById(R.id.polubienie);
             //edit = itemView.findViewById(R.id.edit);
             usun = itemView.findViewById(R.id.delete);
-            //klucz = itemView.findViewById(R.id.klucz);
 
 
            usun.setOnClickListener(new View.OnClickListener() {
@@ -104,20 +91,15 @@ public class AdapterMyQuotes extends RecyclerView.Adapter<AdapterMyQuotes.MyView
                       // if(list.size() != 0) {
                        int position = getAdapterPosition();
                        if (position != RecyclerView.NO_POSITION) {
-                           //for(int item = position - 1; item >= 0 ; item--) {
-
-                                  list.remove(position - 1);
-                                  listener.onDeleteClick(position);
-                                  notifyDataSetChanged();
-
-                         // }
 
 
-                       } /*if(position == 0) {
-                           list.remove(position);
-                           listener.onFirstDelete(position - 1);
-                           notifyDataSetChanged();
-                       }*/
+                               list.remove(list.get(position).getKlucz());
+                               listener.onDeleteClick(position);
+                               notifyItemRangeChanged(position, getItemCount());
+
+                                 notifyDataSetChanged();
+
+                       }
 
 
                    }

@@ -24,7 +24,7 @@ import java.util.Map;
 
 public class Friends extends AppCompatActivity{
 
-    DatabaseReference reference, ref, databaseReference;
+    DatabaseReference reference, ref, databaseReference, databaseRef, dataBase;
     ArrayList<FriendStructure> list;
     AdapterFriends adapterFriends;
     RecyclerView recyclerView;
@@ -37,6 +37,12 @@ public class Friends extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_friends);
 
+        if(FirebaseAuth.getInstance().getCurrentUser() != null) {
+            dataBase = FirebaseDatabase.getInstance().getReference().child("uzytkownicy").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("znajomi");
+        }
+        else if(Profile.getCurrentProfile() != null) {
+            dataBase = FirebaseDatabase.getInstance().getReference().child("uzytkownicy").child(Profile.getCurrentProfile().getId()).child("znajomi");
+        }
 
         reference = FirebaseDatabase.getInstance().getReference().child("uzytkownicy");
         recyclerView = findViewById(R.id.recyclerView);
@@ -97,7 +103,12 @@ public class Friends extends AppCompatActivity{
                                     query.addListenerForSingleValueEvent(new ValueEventListener() {
                                         @Override
                                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                            for (DataSnapshot ds : dataSnapshot.getChildren()) {
+
+
+
+
+                                                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+
                                                 if(!dataSnapshot.child(list.get(position).getNumer()).exists()) {
 
                                                     Map<String, Object> userData = new HashMap<>();
@@ -106,13 +117,16 @@ public class Friends extends AppCompatActivity{
 
 
                                                     databaseReference.updateChildren(userData);
-                                                } else if(dataSnapshot.child(list.get(position).getNumer()).exists()) {
-                                                    Map<String, Object> userData = new HashMap<>();
+                                                }
 
-                                                    userData.put(list.get(position).getNumer(), null);
+                                                    else if(dataSnapshot.child(list.get(position).getNumer()).exists()) {
+                                                        Map<String, Object> userData = new HashMap<>();
+
+                                                        userData.put(list.get(position).getNumer(), null);
 
 
-                                                    databaseReference.updateChildren(userData);
+                                                        databaseReference.updateChildren(userData);
+
                                                 }
 
                                             }

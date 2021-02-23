@@ -119,22 +119,15 @@ public class MyQuotes extends AppCompatActivity {
                     if (dataSnapshot.exists()) {
                         if (FirebaseAuth.getInstance().getCurrentUser() != null) {
                             String firebaseAuth = FirebaseAuth.getInstance().getCurrentUser().getUid();
-                           // if (FirebaseAuth.getInstance().getCurrentUser() != null) {
 
-                                //adapterMyQuotes.
 
                                 list = new ArrayList<>();
                                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
 
 
-                                    Boolean currentUserr = ds.child("cytaty").child("uzytkownik").equals(FirebaseAuth.getInstance().getCurrentUser().getUid());
                                     if (ds.child("uzytkownik").getValue() != null && ds.child("uzytkownik").getValue().equals(FirebaseAuth.getInstance().getCurrentUser().getUid())) {
-                                        // if (currentUserr.equals(FirebaseAuth.getInstance().getCurrentUser().getEmail()) && FirebaseAuth.getInstance().getCurrentUser().getEmail() != null && currentUserr != null) {
                                         list.add(ds.getValue(MyQuoteStructure.class));
                                         textView.setVisibility(View.GONE);
-
-
-
                                     } else  {
                                         textView.setVisibility(View.VISIBLE);
                                     }
@@ -146,58 +139,19 @@ public class MyQuotes extends AppCompatActivity {
                                     @Override
                                     public void onDeleteClick(final int position) {
 
-                                       query.addListenerForSingleValueEvent(new ValueEventListener() {
-                                           @Override
-                                           public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                               for(DataSnapshot ds: dataSnapshot.getChildren()) {
-
-
-
-                                                       Map<String, Object> userData = new HashMap<>();
-
-                                                       userData.put(list.get(position).getKlucz(), null);
-
-
-                                                       dataBase.updateChildren(userData);
-                                                       reference.updateChildren(userData);
-
-
-
-
-                                               }
-                                           }
-
-                                           @Override
-                                           public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                                           }
-                                       });
-
-
-
-                                                adapterMyQuotes.notifyItemRemoved(position);
-                                                adapterMyQuotes.notifyDataSetChanged();
-
-
-                                    }
-
-                                    @Override
-                                    public void onFirstDelete(final int position) {
-
-                                        quer.addListenerForSingleValueEvent(new ValueEventListener() {
+                                        query.addListenerForSingleValueEvent(new ValueEventListener() {
                                             @Override
                                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                                 for(DataSnapshot ds: dataSnapshot.getChildren()) {
 
-
-
                                                     Map<String, Object> userData = new HashMap<>();
 
-                                                    userData.put(list.get(position - 1).getKlucz(), null);
+                                                    userData.put(list.get(position).getKlucz(), null);
 
 
                                                     dataBase.updateChildren(userData);
                                                     reference.updateChildren(userData);
+
 
 
 
@@ -211,9 +165,13 @@ public class MyQuotes extends AppCompatActivity {
                                             }
                                         });
 
-                                        adapterMyQuotes.notifyItemRemoved(position - 1);
-                                        adapterMyQuotes.notifyDataSetChanged();
+
+
+
+
+
                                     }
+
 
                                 });
                         } else if (Profile.getCurrentProfile() != null) {
@@ -242,17 +200,13 @@ public class MyQuotes extends AppCompatActivity {
                                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                                 for(DataSnapshot ds: dataSnapshot.getChildren()) {
 
-                                                  //  if(list.get(position).getKlucz().equals(dataSnapshot.child("klucz").getValue())) {
-
-
                                                         Map<String, Object> userData = new HashMap<>();
 
-                                                        userData.put(list.get(position - 1).getKlucz(), null);
+                                                        userData.put(list.get(position).getKlucz(), null);
 
 
                                                         dataBase.updateChildren(userData);
                                                         reference.updateChildren(userData);
-                                                   // }
 
 
 
@@ -267,14 +221,8 @@ public class MyQuotes extends AppCompatActivity {
                                             }
                                         });
 
-                                        adapterMyQuotes.notifyItemRemoved(position - 1);
-                                        adapterMyQuotes.notifyDataSetChanged();
 
 
-                                    }
-
-                                    @Override
-                                    public void onFirstDelete(final int position) {
 
                                     }
 
