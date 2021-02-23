@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mm"
     tools:context=".Login">
 
 
@@ -20,8 +21,9 @@
         android:fontFamily="@font/annie_use_your_telescope"
         android:hint="Wpisz e-mail"
         android:inputType="textEmailAddress"
-        android:textColor="#050505"
-        android:textSize="20sp" />
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editPasswordLogin"
@@ -34,8 +36,9 @@
         android:fontFamily="@font/annie_use_your_telescope"
         android:hint="Wpisz hasło"
         android:inputType="textPassword"
-        android:textColor="#030303"
-        android:textSize="20sp" />
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/buttonLogin"
@@ -46,11 +49,11 @@
         android:layout_centerVertical="true"
         android:layout_marginStart="120dp"
         android:layout_marginTop="396dp"
-        android:backgroundTint="#aec6cf"
+        android:background="#FFFFFF"
         android:fontFamily="@font/annie_use_your_telescope"
         android:text="Zaloguj się"
         android:textAlignment="center"
-        android:textColor="#0E0E0E"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -66,7 +69,7 @@
         android:fontFamily="@font/annie_use_your_telescope"
         android:text="Przypomnij mi hasło"
         android:textAlignment="center"
-        android:textColor="#070707"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -84,7 +87,7 @@
         android:fontFamily="@font/annie_use_your_telescope"
         android:text="Nie masz jeszcze konta? Zarejestruj się!"
         android:textAlignment="center"
-        android:textColor="#050505"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold" />
 

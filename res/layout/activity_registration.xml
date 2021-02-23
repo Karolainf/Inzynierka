@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mm"
     tools:context=".Registration">
 
     <EditText
@@ -19,7 +20,9 @@
         android:ems="10"
         android:hint="Wpisz nazwę użytkownika..."
         android:inputType="textPersonName"
-        android:textSize="20sp" />
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editMail"
@@ -32,7 +35,9 @@
         android:ems="10"
         android:hint="Podaj swój adres e-mail"
         android:inputType="textEmailAddress"
-        android:textSize="20sp" />
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editPassword"
@@ -45,7 +50,9 @@
         android:ems="10"
         android:hint="Podaj hasło"
         android:inputType="textPassword"
-        android:textSize="20sp" />
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <CheckBox
         android:id="@+id/checkPassword"
@@ -57,7 +64,7 @@
         android:layout_marginEnd="31dp"
         android:fontFamily="@font/annie_use_your_telescope"
         android:text="Pokaż hasło"
-        android:textColor="#0A0A0A"
+        android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -75,7 +82,9 @@
         android:ems="10"
         android:hint="Powtórz hasło"
         android:inputType="textPassword"
-        android:textSize="20sp" />
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <CheckBox
         android:id="@+id/checkRepeatPassword"
@@ -90,7 +99,7 @@
         android:layout_marginBottom="307dp"
         android:fontFamily="@font/annie_use_your_telescope"
         android:text="Pokaż hasło"
-        android:textColor="#0F0F0F"
+        android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -104,9 +113,11 @@
         android:layout_gravity="bottom|right"
         android:layout_marginEnd="129dp"
         android:layout_marginBottom="184dp"
+        android:background="#FFFFFF"
         android:fontFamily="@font/annie_use_your_telescope"
         android:text="ZAREJESTRUJ SIĘ"
-        android:textColor="#0E0E0E"
+        android:textAlignment="center"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -122,7 +133,7 @@
         android:fontFamily="@font/annie_use_your_telescope"
         android:text="Masz już konto? Zaloguj się!"
         android:textAlignment="center"
-        android:textColor="#070707"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold" />
 </RelativeLayout>

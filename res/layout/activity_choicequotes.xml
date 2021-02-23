@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/mm"
     tools:context=".ChoiceQuotes"
     android:orientation="vertical">
 
@@ -21,8 +22,9 @@
         android:fontFamily="@font/annie_use_your_telescope"
         android:text="Wyszukaj według autora"
         android:textAlignment="center"
-        android:textColor="#0C0C0C"
+        android:textColor="#000000"
         android:textSize="24sp"
+        android:textStyle="bold"
         android:typeface="sans" />
 
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mm"
     tools:context=".LoginForm">
 
     <Button
@@ -15,10 +16,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="124dp"
         android:layout_marginTop="95dp"
+        android:background="#FFFFFF"
         android:fontFamily="@font/annie_use_your_telescope"
         android:text="FACEBOOK"
         android:textAlignment="center"
-        android:textColor="#0A0A0A"
+        android:textColor="#000000"
         android:textSize="32sp"
         android:textStyle="bold" />
 
@@ -31,6 +33,7 @@
         android:layout_centerInParent="true"
         android:layout_marginEnd="138dp"
         android:layout_marginBottom="338dp"
+        android:background="#FFFFFF"
         android:fontFamily="@font/annie_use_your_telescope"
         android:text="E-MAIL"
         android:textAlignment="center"

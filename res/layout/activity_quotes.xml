@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".Quotes"
+    android:background="@drawable/mm"
     android:orientation="vertical">
 
     <Switch
